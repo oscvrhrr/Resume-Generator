@@ -1,5 +1,6 @@
 import BasicInfoForm from "./BasicInfoForm";
 import ExperienceForm from "./ExperienceForm";
+import EducationalForm from "./EducationalForm";
 import Resume from "./Resume";
 
 
@@ -12,13 +13,20 @@ export default function Dashboard () {
     const [email, setEmail] = useState('');
     const [company, setCompany] = useState('');
     const [position, setPosition] = useState('');
-    const [responsibilities, setResponsibilities] = useState('')
+    const [responsibilities, setResponsibilities] = useState('');
     const [date, setDate] = useState('');
+    const [school, setSchool] = useState('');
+    const [degree, setDegree] = useState('');
+    const [enrolled, setEnrolled] = useState('');
+    const [graduated, setGraduated] = useState('');
+
+
+
 
 
     return (
         <div className=" w-full h-full flex justify-between">
-            <div className="h-[40rem] bg-zinc-200 w-1/2 text-3xl ml-3">
+            <div className="bg-zinc-50 w-1/2 text-3xl ml-3 overflow h-[40rem] overflow-auto ">
                 <BasicInfoForm
                     first={first}
                     last={last}
@@ -38,15 +46,21 @@ export default function Dashboard () {
                     setPositionProp={(event) => setPosition(event.target.value)}
                     setResponsibilitiesProp={(event) => setResponsibilities(event.target.value)}
                     setDateProp={(event) => setDate(event.target.value)}
+                />
 
+                <EducationalForm
+                    school={school}
+                    degree={degree}
+                    enrolled={enrolled}
+                    graduated={graduated}
+                    setSchoolProp={(event) => setSchool(event.target.value)}
+                    setDegreeProp={(event) => setDegree(event.target.value)}
+                    setEnrolledProp={(event) => setEnrolled(event.target.value)}
+                    setGraduatedProp={(event) => setGraduated(event.target.value)}
                 />
             </div>
 
 
-                
-                
-            
-           
            <Resume
             first={first}
             last={last}
@@ -56,6 +70,10 @@ export default function Dashboard () {
             position={position}
             responsibilities={responsibilities}
             date={date}
+            school={school}
+            degree={degree}
+            enrolled={enrolled}
+            graduated={graduated}
            
            />
 

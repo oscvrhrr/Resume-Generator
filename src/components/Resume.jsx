@@ -8,20 +8,28 @@ export default function Resume({
   company,
   position,
   responsibilities,
-  date
+  date,
+  school,
+  degree,
+  enrolled,
+  graduated
 
  }) {
   return (
-    <div className="h-[40rem] bg-zinc-200 w-1/2 text-3xl ml-3">
+    <div className="h-[40rem] bg-zinc-50 w-1/2 text-3xl ml-3">
       <h1>Polished Resume</h1>
       <p>{first === "" ? "Mike" : first}</p>
       <p>{last === "" ? "Wazowski" : last}</p>
       <p>{number === "" ? "(415) 888 8888" : number}</p>
       <p>{email === "" ? "mikewazowski@gmail.com" : email}</p>
-      <p>{company === "" ? "Mike" : company}</p>
-      <p>{position === "" ? "Wazowski" : position}</p>
-      <p>{responsibilities === "" ? "(415) 888 8888" : responsibilities}</p>
+      <p>{company === "" ? "nike" : company}</p>
+      <p>{position === "" ? "Ux designer" : position}</p>
+      <p>{responsibilities === "" ? "Intern" : responsibilities}</p>
       <p>{date === "" ? "mikewazowski@gmail.com" : date}</p>
+      <p>{school === "" ? "UC Berkeley": school}</p>
+      <p>{degree === "" ? "BS Computer science": degree }</p>
+      <p>{enrolled === "" ? "2016": enrolled}</p>
+      <p>{graduated === ""? "2020": graduated}</p>
     </div>
   );
 }
