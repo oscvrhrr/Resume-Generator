@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-export default function Form({
+export default function BasicInfoForm({
   first,
   last,
   number,
@@ -8,17 +8,18 @@ export default function Form({
   setFirstProp,
   setLastProp,
   setNumberProp,
-  setEmailProp
+  setEmailProp,
+  children
 }) {
   return (
-    <div className="h-[40rem] bg-zinc-200 w-1/2 text-3xl ml-3">
+    <div className="">
       <h1>Resume Generator</h1>
       <div className="flex flex-col ">
-        <input className="m-2" value={first} onChange={setFirstProp} type="text"></input>
-        <input className="m-2" value={last} onChange={setLastProp} type="text"></input>
-        <input className="m-2" value={number} onChange={setNumberProp} type="text"></input>
+        <input className="m-2" value={first} onChange={setFirstProp} type="text" placeholder="first name"></input>
+        <input className="m-2" value={last} onChange={setLastProp} type="text" placeholder="last name"></input>
         <input className="m-2" value={number} onChange={setNumberProp} type="text"></input>
         <input className="m-2" value={email} onChange={setEmailProp} type="text" />
+        {children}
       </div>
     </div>
   );
