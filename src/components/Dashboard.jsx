@@ -1,4 +1,4 @@
-import BasicInfoForm from "./Form";
+import BasicInfoForm from "./BasicInfoForm";
 import ExperienceForm from "./ExperienceForm";
 import Resume from "./Resume";
 

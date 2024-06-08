@@ -18,10 +18,10 @@ export default function Resume({
       <p>{last === "" ? "Wazowski" : last}</p>
       <p>{number === "" ? "(415) 888 8888" : number}</p>
       <p>{email === "" ? "mikewazowski@gmail.com" : email}</p>
-      <p>{company === "" ? "Mike" : first}</p>
-      <p>{position === "" ? "Wazowski" : last}</p>
-      <p>{responsibilities === "" ? "(415) 888 8888" : number}</p>
-      <p>{date === "" ? "mikewazowski@gmail.com" : email}</p>
+      <p>{company === "" ? "Mike" : company}</p>
+      <p>{position === "" ? "Wazowski" : position}</p>
+      <p>{responsibilities === "" ? "(415) 888 8888" : responsibilities}</p>
+      <p>{date === "" ? "mikewazowski@gmail.com" : date}</p>
     </div>
   );
 }
