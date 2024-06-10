@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons"
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function EducationalForm({
   school,
@@ -16,30 +16,42 @@ export default function EducationalForm({
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
-
   const handleOpen = () => {
-    !isOpen? setIsOpen(true): null;
-  }
+    !isOpen ? setIsOpen(true) : null;
+  };
 
   const handleClose = () => {
-    isOpen? setIsOpen(false): null;
-  }
-
+    isOpen ? setIsOpen(false) : null;
+  };
 
   return (
     <>
-      {
-        !isOpen?
+      {!isOpen ? (
         <div className="rounded-lg bg-white my-4 flex items-center justify-between">
-          <h1 className="p-4 text-left font-bold bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent" >Education</h1>
-          <FontAwesomeIcon className="mr-8" onClick={handleOpen} icon={faArrowDown} />
+          <h1 className="p-4 text-left font-bold bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent">
+            Education
+          </h1>
+          <FontAwesomeIcon
+            className="mr-8"
+            onClick={handleOpen}
+            icon={faArrowDown}
+          />
         </div>
-        :
+      ) : (
         <div>
           <form action="" className="flex flex-col bg-white my-4 rounded-lg">
             <div className="flex items-center justify-between">
-              <h2 onClick={handleClose} className="m-4 text-left font-bold bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent">Education</h2>
-              <FontAwesomeIcon className="mr-8" onClick={handleClose} icon={faArrowUp} />
+              <h2
+                onClick={handleClose}
+                className="m-4 text-left font-bold bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent"
+              >
+                Education
+              </h2>
+              <FontAwesomeIcon
+                className="mr-8"
+                onClick={handleClose}
+                icon={faArrowUp}
+              />
             </div>
             <input
               value={school}
@@ -77,7 +89,7 @@ export default function EducationalForm({
             />
           </form>
         </div>
-      }
+      )}
     </>
   );
 }
