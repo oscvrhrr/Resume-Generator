@@ -26,7 +26,7 @@ export default function Dashboard () {
 
     return (
         <div className=" w-full h-full flex justify-between">
-            <div className="bg-zinc-50 w-1/2 text-3xl ml-3 overflow h-[40rem] overflow-auto rounded ">
+            <div className="bg-indigo-200 w-1/2 text-3xl ml-3 overflow h-[40rem] overflow-auto rounded py-6 px-4 ">
                 <BasicInfoForm
                     first={first}
                     last={last}
