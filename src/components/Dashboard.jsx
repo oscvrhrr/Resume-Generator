@@ -20,9 +20,9 @@ export default function Dashboard() {
   const [graduated, setGraduated] = useState("");
 
   return (
-    <div className=" w-full h-full flex justify-between">
-      <div className="bg-indigo-200 w-1/2 text-3xl ml-3 overflow h-[40rem] overflow-auto rounded py-6 px-4 ">
-        <h1 className="py-4 font-bold text-5xl bg-gradient-to-r from-rose-100 to-teal-100 bg-clip-text text-transparent">
+    <body className=" w-full h-[100vh] flex justify-around">
+      <div className="bg-indigo-200 w-2/5 text-3xl ml-3 overflow h-[40rem] overflow-auto rounded py-6 px-4 ">
+        <h1 className="text-center py-4 font-bold text-5xl bg-gradient-to-r from-rose-100 to-teal-100 bg-clip-text text-transparent">
           CV Generator
         </h1>
         <BasicInfoForm
@@ -74,6 +74,6 @@ export default function Dashboard() {
         enrolled={enrolled}
         graduated={graduated}
       />
-    </div>
+    </body>
   );
 }
