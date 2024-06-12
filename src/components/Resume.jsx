@@ -3,7 +3,7 @@
 const dummyText =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
 
-export default function Resume({ basicInputs, experienceInputs, eduInputs }) {
+export default function Resume({ basicInputs, experienceInputs, eduInputs, isDisplayed }) {
   return (
     <div className="h-[45rem] bg-zinc-50 w-2/5  ml-3 text-sm text-zinc-500">
       <div className="flex justify-center mt-10 uppercase text-black">
@@ -19,16 +19,16 @@ export default function Resume({ basicInputs, experienceInputs, eduInputs }) {
         <div className="flex justify-between items-center">
           <div className="my-2">
             <p className="text-left font-serif text-black">
-              {experienceInputs.position || "Barista"}
+              {isDisplayed? experienceInputs.position : "Barista"}
             </p>
             <p className="text-left">
-              {experienceInputs.company || "Equator Coffee"}
+              {isDisplayed? experienceInputs.company : "Equator Coffee"}
             </p>
           </div>
-          <p>{experienceInputs.date || "2020-2024"}</p>
+          <p>{isDisplayed? experienceInputs.date : "2020-2024"}</p>
         </div>
         <p className="text-left">
-          {experienceInputs.responsibilities || dummyText}
+          {isDisplayed? experienceInputs.responsibilities : dummyText}
         </p>
       </div>
       <div className="w-10/12 m-auto">

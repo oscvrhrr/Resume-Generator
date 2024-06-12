@@ -6,6 +6,8 @@ export default function Dashboard() {
   const [basicInputs, setBasicInputs] = useState({});
   const [experienceInputs, setExperienceInputs] = useState({});
   const [eduInputs, setEduInputs] = useState({});
+  const [isDisplayed, setIsDisplayed] = useState(false);
+
 
   const handleBasicInputs = (event) => {
     const name = event.target.name;
@@ -25,6 +27,13 @@ export default function Dashboard() {
     setEduInputs((prevstate) => ({ ...prevstate, [name]: value }));
   };
 
+  const handleClick = (event) => {
+    event.preventDefault();
+    if(!isDisplayed) {
+      setIsDisplayed(true)
+    }
+  }
+
   return (
     <body className=" w-full h-[100vh] flex justify-around">
       <ResumeForm
@@ -34,12 +43,14 @@ export default function Dashboard() {
         setBasicInputsProps={handleBasicInputs}
         setExperienceInputsProps={handleExperienceInputs}
         setEduInputsProps={handleEduInputs}
+        setShown={handleClick}
       />
 
       <Resume
         basicInputs={basicInputs}
         experienceInputs={experienceInputs}
         eduInputs={eduInputs}
+        isDisplayed={isDisplayed}
       />
     </body>
   );

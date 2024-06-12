@@ -12,11 +12,11 @@ export default function ResumeForm({
 
   eduInputs,
   setEduInputsProps,
+  setShown,
 }) {
   return (
     <form
-      action=""
-      className="bg-indigo-300 w-2/5 h-[40rem] rounded-md p-5 overflow-auto"
+    className="bg-indigo-300 w-2/5 h-[40rem] rounded-md p-5 overflow-auto"
     >
       <h1 className="text-center py-4 font-bold text-5xl bg-gradient-to-r from-rose-100 to-teal-100 bg-clip-text text-transparent">
         CV Generator
@@ -28,6 +28,7 @@ export default function ResumeForm({
       <ExperienceForm
         experienceInputs={experienceInputs}
         setExperienceInputsProps={setExperienceInputsProps}
+        setShown={setShown}
       />
       <EducationalForm
         eduInputs={eduInputs}
