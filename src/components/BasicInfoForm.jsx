@@ -4,16 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-export default function BasicInfoForm({
-  first,
-  last,
-  number,
-  email,
-  setFirstProp,
-  setLastProp,
-  setNumberProp,
-  setEmailProp,
-}) {
+export default function BasicInfoForm({ basicInputs, setBasicInputsProps }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -54,32 +45,36 @@ export default function BasicInfoForm({
               />
             </div>
             <input
-              className="m-2 border rounded"
-              value={first}
-              onChange={setFirstProp}
               type="text"
+              name="firstname"
+              value={basicInputs.firstname || ""}
+              onChange={setBasicInputsProps}
               placeholder="First name"
+              className="m-2 border rounded"
             ></input>
             <input
-              className="m-2 border rounded"
-              value={last}
-              onChange={setLastProp}
               type="text"
+              name="lastname"
+              value={basicInputs.lastname || ""}
+              onChange={setBasicInputsProps}
               placeholder="Last name"
+              className="m-2 border rounded"
             ></input>
             <input
-              className="m-2 border rounded"
-              value={number}
-              onChange={setNumberProp}
               type="text"
+              name="phonenumber"
+              value={basicInputs.phonenumber || ""}
+              onChange={setBasicInputsProps}
               placeholder="Phone number"
+              className="m-2 border rounded"
             ></input>
             <input
-              className="m-2 border rounded"
-              value={email}
-              onChange={setEmailProp}
               type="text"
+              name="email"
+              value={basicInputs.email || ""}
+              onChange={setBasicInputsProps}
               placeholder="Email"
+              className="m-2 border rounded"
             />
           </form>
         </div>

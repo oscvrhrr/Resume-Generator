@@ -5,14 +5,8 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function ExperienceForm({
-  company,
-  setCompanyProp,
-  position,
-  setPositionProp,
-  responsibilities,
-  setResponsibilitiesProp,
-  date,
-  setDateProp,
+  experienceInputs,
+  setExperienceInputsProps,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -54,40 +48,36 @@ export default function ExperienceForm({
               />
             </div>
             <input
-              value={company}
-              onChange={setCompanyProp}
               type="text"
               name="company"
-              id=""
-              className="m-2 border rounded"
+              value={experienceInputs.company || ""}
+              onChange={setExperienceInputsProps}
               placeholder="Company"
+              className="m-2 border rounded"
             />
             <input
-              value={position}
-              onChange={setPositionProp}
               type="text"
               name="position"
-              id=""
-              className="m-2 border rounded"
+              value={experienceInputs.position || ""}
+              onChange={setExperienceInputsProps}
               placeholder="Job title"
+              className="m-2 border rounded"
             />
             <input
-              value={responsibilities}
-              onChange={setResponsibilitiesProp}
               type="text"
               name="responsibilities"
-              id=""
-              className="m-2 border rounded"
+              value={experienceInputs.responsibilities || ""}
+              onChange={setExperienceInputsProps}
               placeholder="Job Description"
+              className="m-2 border rounded"
             />
             <input
-              value={date}
               type="text"
-              onChange={setDateProp}
               name="date"
-              id=""
-              className="m-2 border rounded"
+              value={experienceInputs.date || ""}
+              onChange={setExperienceInputsProps}
               placeholder="Date"
+              className="m-2 border rounded"
             />
           </form>
         </div>

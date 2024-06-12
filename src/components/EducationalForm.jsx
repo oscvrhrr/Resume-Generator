@@ -4,16 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-export default function EducationalForm({
-  school,
-  degree,
-  enrolled,
-  graduated,
-  setSchoolProp,
-  setDegreeProp,
-  setEnrolledProp,
-  setGraduatedProp,
-}) {
+export default function EducationalForm({ eduInputs, setEduInputsProps }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -54,38 +45,36 @@ export default function EducationalForm({
               />
             </div>
             <input
-              value={school}
-              onChange={setSchoolProp}
               type="text"
               name="school"
-              id=""
-              className="m-2 border rounded"
+              value={eduInputs.school}
+              onChange={setEduInputsProps}
               placeholder="Institution"
+              className="m-2 border rounded"
             />
             <input
-              value={degree}
-              onChange={setDegreeProp}
               type="text"
               name="degree"
-              id=""
-              className="m-2 border rounded"
+              value={eduInputs.degree}
+              onChange={setEduInputsProps}
               placeholder="Major"
+              className="m-2 border rounded"
             />
             <input
-              value={enrolled}
-              onChange={setEnrolledProp}
               type="text"
               name=" enrolled"
-              className="m-2 border rounded"
+              value={eduInputs.enrolled}
+              onChange={setEduInputsProps}
               placeholder="Date Enrolled"
+              className="m-2 border rounded"
             />
             <input
-              value={graduated}
-              onChange={setGraduatedProp}
               type="text"
               name="graduated"
-              className="m-2 border rounded"
+              value={eduInputs.graduated}
+              onChange={setEduInputsProps}
               placeholder="Graduation"
+              className="m-2 border rounded"
             />
           </form>
         </div>
