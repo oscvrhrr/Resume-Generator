@@ -8,31 +8,29 @@ export default function Dashboard() {
   const [eduInputs, setEduInputs] = useState({});
   const [isDisplayed, setIsDisplayed] = useState(false);
 
+ 
 
   const handleBasicInputs = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
+    const { name, value } = event.target;
     setBasicInputs((values) => ({ ...values, [name]: value }));
   };
 
   const handleExperienceInputs = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
+    const { name, value } = event.target;
     setExperienceInputs((prevstate) => ({ ...prevstate, [name]: value }));
   };
 
   const handleEduInputs = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
+    const { name, value } = event.target;
     setEduInputs((prevstate) => ({ ...prevstate, [name]: value }));
   };
 
   const handleClick = (event) => {
     event.preventDefault();
-    if(!isDisplayed) {
-      setIsDisplayed(true)
+    if (!isDisplayed) {
+      setIsDisplayed(true);
     }
-  }
+  };
 
   return (
     <body className=" w-full h-[100vh] flex justify-around">
@@ -44,6 +42,7 @@ export default function Dashboard() {
         setExperienceInputsProps={handleExperienceInputs}
         setEduInputsProps={handleEduInputs}
         setShown={handleClick}
+       
       />
 
       <Resume

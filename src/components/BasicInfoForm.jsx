@@ -23,7 +23,7 @@ export default function BasicInfoForm({ basicInputs, setBasicInputsProps }) {
             Basic Information
           </h1>
           <FontAwesomeIcon
-            className="mr-8"
+            className="mr-8 cursor-pointer"
             onClick={handleOpen}
             icon={faArrowDown}
           />
@@ -38,7 +38,7 @@ export default function BasicInfoForm({ basicInputs, setBasicInputsProps }) {
               Basic Information
             </h2>
             <FontAwesomeIcon
-              className="mr-6"
+              className="mr-6 cursor-pointer"
               onClick={handleClose}
               icon={faArrowUp}
             />

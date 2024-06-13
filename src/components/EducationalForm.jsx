@@ -23,7 +23,7 @@ export default function EducationalForm({ eduInputs, setEduInputsProps }) {
             Education
           </h1>
           <FontAwesomeIcon
-            className="mr-8"
+            className="mr-8 cursor-pointer"
             onClick={handleOpen}
             icon={faArrowDown}
           />
@@ -39,7 +39,7 @@ export default function EducationalForm({ eduInputs, setEduInputsProps }) {
                 Education
               </h2>
               <FontAwesomeIcon
-                className="mr-8"
+                className="mr-8 cursor-pointer"
                 onClick={handleClose}
                 icon={faArrowUp}
               />

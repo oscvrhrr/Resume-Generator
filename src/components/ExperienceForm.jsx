@@ -8,6 +8,8 @@ export default function ExperienceForm({
   experienceInputs,
   setExperienceInputsProps,
   setShown,
+  setSection
+
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,12 +25,12 @@ export default function ExperienceForm({
   return (
     <>
       {!isOpen ? (
-        <div className="rounded-lg bg-white flex items-center justify-between">
+        <div className="rounded-lg bg-white flex items-center justify-between my-4">
           <h1 className="p-4 text-left font-bold bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent">
             Experience Section
           </h1>
           <FontAwesomeIcon
-            className="mr-8"
+            className="mr-8 cursor-pointer"
             onClick={handleOpen}
             icon={faArrowDown}
           />
@@ -44,7 +46,7 @@ export default function ExperienceForm({
                 Experience Section
               </h2>
               <FontAwesomeIcon
-                className="mr-6"
+                className="mr-6 cursor-pointer"
                 onClick={handleClose}
                 icon={faArrowUp}
               />
@@ -81,8 +83,8 @@ export default function ExperienceForm({
               placeholder="Date"
               className="border rounded w-full mb-4"
             />
-            <button onClick={setShown} className="bg-indigo-300 text-white rounded-lg p-1 mr-4 mb-4 px-4" type="submit">Save</button>
-            <button onClick={(e) => e.preventDefault()} className="bg-indigo-300 text-white rounded-lg p-1 mb-4 px-4 " type="submit">+ Section</button>
+            <button onClick={setShown} className="bg-indigo-300 hover:bg-indigo-400 text-white rounded-lg p-1 mr-4 mb-4 px-4" type="submit">Save</button>
+            <button onClick={setSection} className="bg-indigo-300 text-white rounded-lg p-1 mb-4 px-4 " type="submit">+ Section</button>
           </form>
         </div>
       )}

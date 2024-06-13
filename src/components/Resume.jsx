@@ -3,7 +3,7 @@
 const dummyText =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
 
-export default function Resume({ basicInputs, experienceInputs, eduInputs, isDisplayed }) {
+export default function Resume({ basicInputs, experienceInputs, eduInputs, isDisplayed, sections }) {
   return (
     <div className="h-[45rem] bg-zinc-50 w-2/5  ml-3 text-sm text-zinc-500">
       <div className="flex justify-center mt-10 uppercase text-black">
@@ -30,6 +30,7 @@ export default function Resume({ basicInputs, experienceInputs, eduInputs, isDis
         <p className="text-left">
           {isDisplayed? experienceInputs.responsibilities : dummyText}
         </p>
+        {sections}
       </div>
       <div className="w-10/12 m-auto">
         <p className="font-bold text-left text-black uppercase">Education</p>
